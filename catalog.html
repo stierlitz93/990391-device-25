@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header-index">
+    <header class="header-index header-catalog">
       <div class="container">
         <a class="header-logo" href="#">
           <img src="img/logo.svg" alt="Логотип">
@@ -80,26 +80,36 @@
       </div>
     </header>
     <main class="main-index">
-      <div class="container">
-        <form class="form-filter">
+    <div class="container-catalog">
+      <form class="form-filter">
           <h2 class="filter-ttitle">Фильтр:</h2>
-          <p class="filter-toogle">
+          <div class="filter-toogle">
             <h3 class="filter-toogle-title">Стоимость</h3>
             <div class="filter-toggle-block"></div>
-          </p>
-          <p class="filter-specific">
-            <h3 class="filter-specific-title"></h3>
-            <input type="text">
+          </div>
+          <div class="filter-specific">
+            <h3 class="filter-specific-title">Цвет</h3>
+            <input type="checkbox">
             <label for=""></label>
-          </p>
-          <p class="filter-specific">
-            <h3 class="filter-specific-title"></h3>
-            <input type="text">
+            <input type="checkbox">
             <label for=""></label>
-          </p>
+            <input type="checkbox">
+            <label for=""></label>
+            <input type="checkbox">
+            <label for=""></label>
+            <input type="checkbox">
+            <label for=""></label>
+          </div>
+          <div class="filter-specific">
+            <h3 class="filter-specific-title">Bluetooth</h3>
+            <input type="radio">
+            <label for=""></label>
+            <input type="radio">
+            <label for=""></label>
+          </div>
           <button class="filter-button">Показать</button>
-        </form>
-
+      </form>
+      <div class="catalog-right-box">
         <div class="sorting-catalog">
           <h2 class="sorting-title">Сортировка:</h2>
           <ul class="sorting-list reset-style-size">
@@ -122,7 +132,6 @@
             </li>
           </ul>
         </div>
-
         <ul class="catalog-list reset-style-size">
           <li class="catalog-item">
             <a class="catalog-link-image" href="">
@@ -200,6 +209,8 @@
           </ul>
           <a class="pagination-forward" href=""></a>
         </div>
+      </div>
+    </div>
     </main>
     <footer class="footer-index">
       <div class="container container-footer">

@@ -725,25 +725,51 @@ a{
     margin-top: 62px;
 }
 /*catalog*/
+.header-catalog::before{
+    height: 186px;
+}
 .nav-history-box{
-
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 87px;
+    margin-left: -2px;
 }
 .title-history{
-
+    margin: 0;
+    font-family: "Gilroy", sans-serif;
+    font-size: 47px;
+    font-weight: bold;
+    line-height: 48px;
+    letter-spacing: 0.5px;
+    color: #000;
 }
 .history-list{
-
+    display: flex;
+    width: 385px;
+    justify-content: space-between;
+    margin-top: 24px;
 }
 .history-item{
 
 }
 .history-link{
+    font-family: "Open sans", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #000;
+    opacity: 0.3;
+}
+.container-catalog{
+    display: flex;
+}
+.catalog-right-box{
 
 }
-
-
 .form-filter{
-
+    width: 468px;
+    height: 1287px;
 }
 .filter-ttitle{
 
@@ -755,6 +781,9 @@ a{
 
 }
 .filter-toggle-block{
+
+}
+.filter-specific{
 
 }
 .filter-specific-title{
