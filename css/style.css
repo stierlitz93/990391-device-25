@@ -7,6 +7,13 @@
          url("gilroylight.woff") format("woff"),
          url("gilroylight.woff2") format("woff2");
 }
+.visually-hidden{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+    clip: rect(0 ,0 ,0 ,0);
+    margin: 0;
+}
 body{
     margin: 0;
     padding: 0;
@@ -763,53 +770,195 @@ a{
 }
 .container-catalog{
     display: flex;
+    /* margin-left: -140px; */
+    margin-top: 46px;
+    width: 100%;
 }
 .catalog-right-box{
-
+    width: 67.5%;
+}
+.filter-container{
+    width: 32.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #eee;
+    height: 1288px;
 }
 .form-filter{
-    width: 468px;
-    height: 1287px;
+    width: 270px;
 }
-.filter-ttitle{
-
+.form-filter label{
+    font-family: "Open sans", sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 39px;
+    color: #000;
+}
+.filter-title-color{
+    align-self: stretch;
+    margin: 0;
+    height: 70px;
+    background-color: #dbdbdb;
+}
+.filter-title{
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin: 0;
+    align-self: stretch;
+    letter-spacing: 4px;
+    margin-top: -47px;
 }
 .filter-toogle{
-
+    margin-top: 104px;
+    position: relative;
+}
+.filter-toogle::before {
+    content: "";
+    height: 2px;
+    width: 201px;
+    background-color: #000;
+    position: absolute;
+    top: -12px;
 }
 .filter-toogle-title{
-
+    font-family: "Gilroy", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0;
 }
-.filter-toggle-block{
-
+.filter-controls{
+    width: 202px;
+    margin-top: 35px;
+    position: relative;
 }
-.filter-specific{
-
+.filter-control-scale {
+    height: 2px;
+    background-color: #d7dcde;
+    position: relative;
 }
-.filter-specific-title{
-
+.filter-control-scale::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #00ca74;
+    width: 60%;
 }
-.filter-button{
-
+.filter-control-toggle {
+    position: relative;
+    cursor: pointer;
+}
+.filter-control-toggle::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    position: absolute;
+    background-color: #ababab;
+    top: -11px;
+    left: -4px;
+}
+.filter-control-toggle::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    position: absolute;
+    background-color: #ababab;
+    top: -11px;
+    right: 73px;
+}
+.filter-specific-one {
+    margin-top: 80px;
+    position: relative;
+}
+.filter-specific-one::before {
+    content: "";
+    height: 2px;
+    width: 201px;
+    background-color: #000;
+    position: absolute;
+    top: -13px;
+}
+.filter-specific-pick{
+    
+}
+.filter-specific-title {
+    font-family: "Gilroy", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 17px;
+}
+.filter-specific-pick {
+    margin: 0;
+    margin-top: 1px;
+}
+.filter-specific-two {
+    margin-top: 44px;
+    position: relative;
+}
+.filter-specific-two::before {
+    content: "";
+    height: 2px;
+    width: 201px;
+    background-color: #000;
+    position: absolute;
+    top: -12px;
+}
+.filter-button {
+    font-family: "Gilroy", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
 }
 
 .sorting-catalog{
-
+    display: flex;
+    height: 70px;
+    background-color: #ebebeb;
+    align-items: center;
 }
 .sorting-title{
-
+    margin: 0;
+    font-family: "Gularoy", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-left: 73px;
 }
 .sorting-list{
-
+    display: flex;
+    margin-left: 50px;
+    width: 287px;
+    justify-content: space-between;
 }
 .sorting-item{
     
 }
 .sorting-link{
-    
+    font-family: "Open sans", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
 }
 .sorting-direction-list{
-    
+    display: flex;
+    margin-left: 232px;
+    width: 40px;
+    justify-content: space-between;
 }
 .sorting-direction-item{
     
@@ -819,13 +968,19 @@ a{
 }
 
 .catalog-list{
-    
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 69px;
+    margin-left: 72px;
+    width: 760px;
+    justify-content: space-between;
+    height: 1011px;
 }
 .catalog-item{
     
 }
 .catalog-link-image{
-    
+    display: flex;
 }
 .catalog-item-hover{
     
@@ -842,28 +997,75 @@ a{
 .catalog-link-hover-compare{
     
 }
+.catalog-item-box-down{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 33px;
+}
 .catalog-item-title{
-    
+    font-family: "Gilroy", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 23px;
+    letter-spacing: 0.2px;
+    width: 246px;
+    margin: 0;
 }
 .catalog-item-price{
-    
+    margin: 0;
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 23px;
+    letter-spacing: 0.2px;
 }
 
 .pagination{
-    
+    display: flex;
+    width: 760px;
+    height: 70px;
+    margin-top: -9px;
+    margin-left: 72px;
+    background-color: #ebebeb;
+    justify-content: space-between;
+    align-items: center;
 }
 .pagination-back{
-    
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-left: 29px;
+    color: #000;
 }
 .pagination-numer-list{
-    
+    display: flex;
+    width: 85px;
+    justify-content: space-between;
 }
 .pagination-numer-item{
     
 }
 .pagination-numer-link{
-    
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000;
 }
 .pagination-forward{
-    
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-right: 25px;
+    color: #000;
+}
+.footer-catalog{
+    margin-top: 0;
 }
