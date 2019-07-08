@@ -226,6 +226,33 @@
             <a class="main-contacts-write_us" href="">Напишите нам</a>
           </div>
         </div>
+        <div class="main-feedback feedback-show">
+          <form class="feedback-form" action="index.php" method="post">
+            <div class="feedback-form-box">
+              <p class="feedback-form-item">
+                <label for="feedback-form-name">Ваше имя:</label>
+                <input id="feedback-form-name" type="text" placeholder="Имя Фамилия">
+              </p>
+              <p class="feedback-form-item">
+                <label for="feedback-form-email">Ваш e-mail:</label>
+                <input id="feedback-form-email" type="text" placeholder="email@example.com">
+              </p>
+            </div>
+            <p class="feedback-form-item feedback-form-item-text">
+              <label for="feedback-form-letter">Текст письма:</label>
+              <textarea id="feedback-form-letter" placeholder="В свободной форме"></textarea>
+            </p>
+            <p class="foooter-feedback-submit-box">
+              <input class="visually-hidden" id="footer-feedback-submit" type="submit">
+              <label for="footer-feedback-submit">Отправить</label>
+            </p>
+            <button class="footer-feedback-close reset-style-size" type="button"></button>
+          </form>
+        </div>
+        <div class="main-map">
+          <img src="img/map-big.jpg" width="960" height="559"alt="Карта">
+          <button class="footer-feedback-close reset-style-size" type="button"></button>
+        </div>
       </div>
     </main>
     <footer class="footer-index">
